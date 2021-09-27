@@ -49,6 +49,10 @@ Come talk to be about it at: https://discord.gg/a4GUCJ3
 [[dependencies.actuallyusefulsmithingtable]]
     modId="minecraft"
     mandatory=true
+<<<<<<< Updated upstream
     versionRange="[1.16.2]"
+=======
+    versionRange="[1.16,)"
+>>>>>>> Stashed changes
     ordering="NONE"
     side="BOTH"
