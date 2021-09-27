@@ -37,35 +37,22 @@
 			<attribute name="gradle_used_by_scope" value="test"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< Updated upstream
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
-	<classpathentry sourcepath="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.2-33.0.61_mapped_snapshot_20200514-1.16/forge-1.16.2-33.0.61_mapped_snapshot_20200514-1.16-sources.jar" kind="lib" path="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.2-33.0.61_mapped_snapshot_20200514-1.16/forge-1.16.2-33.0.61_mapped_snapshot_20200514-1.16-recomp.jar">
-=======
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-16.0.1">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.0.70_mapped_official_1.17.1/forge-1.17.1-37.0.70_mapped_official_1.17.1-recomp.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.0.70_mapped_official_1.17.1/forge-1.17.1-37.0.70_mapped_official_1.17.1-sources.jar">
->>>>>>> Stashed changes
+	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.0.71_mapped_official_1.17.1/forge-1.17.1-37.0.71_mapped_official_1.17.1.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.17.1-37.0.71_mapped_official_1.17.1/forge-1.17.1-37.0.71_mapped_official_1.17.1-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< Updated upstream
-	<classpathentry sourcepath="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.2-33.0.61_mapped_snapshot_20200514-1.16/forge-1.16.2-33.0.61_mapped_snapshot_20200514-1.16-sources.jar" kind="lib" path="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.16.2-33.0.61_mapped_snapshot_20200514-1.16/forge-1.16.2-33.0.61_mapped_snapshot_20200514-1.16-launcher.jar">
-=======
 	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_repo/versions/1.17.1/client-extra.jar">
->>>>>>> Stashed changes
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< Updated upstream
-	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/forge_gradle/minecraft_repo/versions/1.16.2/client-extra.jar">
-=======
 	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/f7be08ec23c21485b9b5a1cf1654c2ec8c58168d/jsr305-3.0.1.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/a2926c057ca3b662b9db194c869bdbe7d3bb8aef/jsr305-3.0.1-sources.jar">
->>>>>>> Stashed changes
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -90,7 +77,7 @@
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.0.70/f84d5cf6d2b729f6b25fe48c03f022441ece0c6f/fmlloader-1.17.1-37.0.70.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.0.70/38b217e0594cd3111dbcdf8af168b46bcb292890/fmlloader-1.17.1-37.0.70-sources.jar">
+	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.0.71/270204761501d4e0792d40cab2c50e32678ac2b2/fmlloader-1.17.1-37.0.71.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlloader/1.17.1-37.0.71/c24eee57ba834d4afc3d66b01757b95e5c14fb2e/fmlloader-1.17.1-37.0.71-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -145,7 +132,7 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.0.70/4ef0c38d54f66d035e3a97fa9f6e0bedbc7c4227/fmlcore-1.17.1-37.0.70.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.0.70/1a1876f2baf2a0ce4a94846a161d4c70b0acdd43/fmlcore-1.17.1-37.0.70-sources.jar">
+	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.0.71/455583534bcf0a9c66c7c4013dde0bc1522b84f/fmlcore-1.17.1-37.0.71.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.17.1-37.0.71/55e706d7f88e0bdfcbffc31d677549c4ccf3ef65/fmlcore-1.17.1-37.0.71-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
@@ -250,12 +237,12 @@
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.0.70/ddbba65fc13375e24d0c93e6f044081a4e403c/javafmllanguage-1.17.1-37.0.70.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.0.70/67c03f9c3da16fe502ff33095daccc9585a99841/javafmllanguage-1.17.1-37.0.70-sources.jar">
+	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.0.71/d7205f384a6807af32fe9e9e6b2950bf938a4b37/javafmllanguage-1.17.1-37.0.71.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.17.1-37.0.71/ebe2fbaf07209f39564766d559e7d709826d968b/javafmllanguage-1.17.1-37.0.71-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.0.70/871b045e28db415c80694250362de54ca17864f3/mclanguage-1.17.1-37.0.70.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.0.70/db4facd671d2b9867500b57e48dbf3587d03b03b/mclanguage-1.17.1-37.0.70-sources.jar">
+	<classpathentry kind="lib" path="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.0.71/4c9b2f7ceece9f2c81eb7192bbf865b10c945f89/mclanguage-1.17.1-37.0.71.jar" sourcepath="D:/Users/Rohzek/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.17.1-37.0.71/523e270eab96d5d5f546a58d9fec487b456904ba/mclanguage-1.17.1-37.0.71-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>

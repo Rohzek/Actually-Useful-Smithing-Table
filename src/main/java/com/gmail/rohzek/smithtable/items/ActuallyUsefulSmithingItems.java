@@ -8,6 +8,8 @@ import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class ActuallyUsefulSmithingItems 
 {
+	//minecraft:obsidian
+	//actuallyusefulsmithingtable
 	public static final RegistryObject<Item> AXE_COPPER = DeferredRegistration.ITEMS.register("copper_axe", () -> new SmithingItemAxe(Tiers.IRON, 1, -2.8f));
 	public static final RegistryObject<Item> PICKAXE_COPPER = DeferredRegistration.ITEMS.register("copper_pickaxe", () -> new SmithingItemPickaxe(Tiers.IRON, 1, -2.8f));
 	public static final RegistryObject<Item> HOE_COPPER = DeferredRegistration.ITEMS.register("copper_hoe", () -> new SmithingItemHoe(Tiers.IRON, 1, -2.8f));
