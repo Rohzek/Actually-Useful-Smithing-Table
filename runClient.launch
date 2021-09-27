@@ -7,18 +7,6 @@
   <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="E:\Github\Actually-Useful-Smithing-Table\run"/>
   <mapAttribute key="org.eclipse.debug.core.environmentVariables">
     <mapEntry key="MOD_CLASSES" value="examplemod%%E:\Github\Actually-Useful-Smithing-Table\bin\main;examplemod%%E:\Github\Actually-Useful-Smithing-Table\bin\main"/>
-<<<<<<< Updated upstream
-    <mapEntry key="MCP_MAPPINGS" value="snapshot_20200514-1.16"/>
-    <mapEntry key="MCP_VERSION" value="20200812.004259"/>
-    <mapEntry key="FORGE_VERSION" value="33.0.61"/>
-    <mapEntry key="assetIndex" value="1.16"/>
-    <mapEntry key="assetDirectory" value="D:\Users\Rohzek\.gradle\caches\forge_gradle\assets"/>
-    <mapEntry key="nativesDirectory" value="E:\Github\Actually-Useful-Smithing-Table\build\natives"/>
-    <mapEntry key="FORGE_GROUP" value="net.minecraftforge"/>
-    <mapEntry key="target" value="fmluserdevclient"/>
-    <mapEntry key="MC_VERSION" value="1.16.2"/>
-=======
     <mapEntry key="MCP_MAPPINGS" value="official_1.17.1"/>
->>>>>>> Stashed changes
   </mapAttribute>
 </launchConfiguration>
