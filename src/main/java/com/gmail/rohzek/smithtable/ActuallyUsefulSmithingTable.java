@@ -1,5 +1,7 @@
 package com.gmail.rohzek.smithtable;
 
+import com.gmail.rohzek.smithtable.items.ActuallyUsefulSmithingItems;
+import com.gmail.rohzek.smithtable.lib.DeferredRegistration;
 import com.gmail.rohzek.smithtable.lib.Reference;
 
 import net.minecraftforge.fml.common.Mod;
@@ -12,5 +14,7 @@ public class ActuallyUsefulSmithingTable
 	{
 		// Register the mod
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		DeferredRegistration.register();
+		ActuallyUsefulSmithingItems.register();
 	}
 }
