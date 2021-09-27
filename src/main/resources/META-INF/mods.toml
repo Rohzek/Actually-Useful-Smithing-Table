@@ -2,7 +2,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[32,)" #mandatory (32 is current forge version)
+loaderVersion="[35,)" #mandatory (32 is current forge version)
 
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
@@ -49,10 +49,6 @@ Come talk to be about it at: https://discord.gg/a4GUCJ3
 [[dependencies.actuallyusefulsmithingtable]]
     modId="minecraft"
     mandatory=true
-<<<<<<< Updated upstream
-    versionRange="[1.16.2]"
-=======
-    versionRange="[1.16,)"
->>>>>>> Stashed changes
+    versionRange="[1.17,)"
     ordering="NONE"
     side="BOTH"

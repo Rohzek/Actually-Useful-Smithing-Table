@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "actuallyusefulsmithingtable:quartz_sharpened_stone_sword"
+  },
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "result": {
+    "item": "actuallyusefulsmithingtable:quartz_sharpened_copper_sword"
+  }
+}

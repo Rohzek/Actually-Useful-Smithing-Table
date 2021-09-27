@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "actuallyusefulsmithingtable:copper_axe"
+  },
+  "addition": {
+    "item": "minecraft:obsidian"
+  },
+  "result": {
+    "item": "actuallyusefulsmithingtable:obsidian_plated_copper_axe"
+  }
+}

@@ -1,3 +1,16 @@
+Build: 1.17.1-37.0.71 - Fri Sep 24 21:10:52 GMT 2021
+	sciwhiz12:
+		Prevent call to Item#initializeClient when in datagen (#8097)
+		
+		When running under data-generation, the Minecraft singleton is unavailable
+		even though the operating env is under the CLIENT dist. Adding this check
+		prevents crashes from devs unaware of this, as most uses of
+		IItemRenderProperties (usually for a custom BEWLR) make use of the
+		Minecraft singleton and therefore will cause NPEs if not guarded against.
+		
+		A similar thing happens in MobEffect and Block.
+
+=========
 Build: 1.17.1-37.0.70 - Sun Sep 19 23:36:14 GMT 2021
 	sciwhiz12:
 		Move ItemStack#forgeInit call earlier to allow earlier capability queries (#8096)

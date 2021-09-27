@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "actuallyusefulsmithingtable:obsidian_plated_copper_pickaxe"
+  },
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": {
+    "item": "actuallyusefulsmithingtable:obsidian_plated_golden_pickaxe"
+  }
+}
