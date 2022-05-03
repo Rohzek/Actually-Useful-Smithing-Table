@@ -4,7 +4,7 @@ import com.gmail.rohzek.smithtable.lib.DeferredRegistration;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ActuallyUsefulSmithingItems 
 {
