@@ -1,11 +1,8 @@
 package com.gmail.rohzek.smithtable.items;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class SmithingItemObsidianHoe extends SmithingItemHoe
 {
@@ -19,8 +16,7 @@ public class SmithingItemObsidianHoe extends SmithingItemHoe
 	{
 		if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_NETHERITE.get()) 
 		{
-			Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", "netherite_hoe"));
-			return item.getMaxDamage(new ItemStack(item)) + 500;
+			return Items.NETHERITE_HOE.getMaxDamage(new ItemStack(Items.NETHERITE_HOE)) + 500;
 		}
 		
 		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_DIAMOND.get()) 

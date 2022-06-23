@@ -1,11 +1,8 @@
 package com.gmail.rohzek.smithtable.items;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class SmithingItemObsidianShovel extends SmithingItemShovel
 {
@@ -19,8 +16,7 @@ public class SmithingItemObsidianShovel extends SmithingItemShovel
 	{
 		if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_NETHERITE.get()) 
 		{
-			Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", "netherite_shovel"));
-			return item.getMaxDamage(new ItemStack(item)) + 500;
+			return Items.NETHERITE_SHOVEL.getMaxDamage(new ItemStack(Items.NETHERITE_SHOVEL)) + 500;
 		}
 		
 		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_DIAMOND.get()) 
