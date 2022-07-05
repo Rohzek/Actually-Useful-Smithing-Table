@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "actuallyusefulsmithingtable:smithing_table",
   "group": "tools",
   "pattern": [
     "C",

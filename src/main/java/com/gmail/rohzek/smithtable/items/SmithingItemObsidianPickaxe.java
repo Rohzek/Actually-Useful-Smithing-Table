@@ -1,11 +1,8 @@
 package com.gmail.rohzek.smithtable.items;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
-import net.minecraftforge.registries.ForgeRegistries;
 
 public class SmithingItemObsidianPickaxe extends SmithingItemPickaxe
 {
@@ -19,8 +16,7 @@ public class SmithingItemObsidianPickaxe extends SmithingItemPickaxe
 	{
 		if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_PICKAXE_NETHERITE.get()) 
 		{
-			Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", "netherite_pickaxe"));
-			return item.getMaxDamage(new ItemStack(item)) + 500;
+			return Items.NETHERITE_PICKAXE.getMaxDamage(new ItemStack(Items.NETHERITE_PICKAXE)) + 500;
 		}
 		
 		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_PICKAXE_DIAMOND.get()) 
@@ -41,6 +37,11 @@ public class SmithingItemObsidianPickaxe extends SmithingItemPickaxe
 		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_PICKAXE_WOOD.get()) 
 		{
 			return Items.WOODEN_PICKAXE.getMaxDamage(new ItemStack(Items.WOODEN_PICKAXE)) + 500;
+		}
+		
+		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_PICKAXE_WOOD.get()) 
+		{
+			return Items.IRON_PICKAXE.getMaxDamage(new ItemStack(Items.IRON_PICKAXE)) + 500;
 		}
 		
 		else 
