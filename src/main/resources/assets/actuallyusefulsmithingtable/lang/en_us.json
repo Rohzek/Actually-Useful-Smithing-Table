@@ -1,0 +1,47 @@
+{
+	"item.actuallyusefulsmithingtable.copper_axe": "Copper Axe",
+	"item.actuallyusefulsmithingtable.copper_pickaxe": "Copper Pickaxe",
+	"item.actuallyusefulsmithingtable.copper_hoe": "Copper Hoe",
+	"item.actuallyusefulsmithingtable.copper_shovel": "Copper Shovel",
+	"item.actuallyusefulsmithingtable.copper_sword": "Copper Sword",
+	
+	"item.actuallyusefulsmithingtable.obsidian_plated_wooden_axe": "Wooden Axe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_golden_axe": "Golden Axe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_iron_axe": "Iron Axe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_copper_axe": "Copper Axe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_diamond_axe": "Diamond Axe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_stone_axe": "Stone Axe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_netherite_axe": "Netherite Axe",
+	
+	"item.actuallyusefulsmithingtable.obsidian_plated_wooden_pickaxe": "Wooden Pickaxe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_golden_pickaxe": "Golden Pickaxe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_iron_pickaxe": "Iron Pickaxe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_copper_pickaxe": "Copper Pickaxe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_diamond_pickaxe": "Diamond Pickaxe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_stone_pickaxe": "Stone Pickaxe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_netherite_pickaxe": "Netherite Pickaxe",
+	
+	"item.actuallyusefulsmithingtable.obsidian_plated_wooden_hoe": "Wooden Hoe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_golden_hoe": "Golden Hoe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_iron_hoe": "Iron Hoe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_copper_hoe": "Copper Hoe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_diamond_hoe": "Diamond Hoe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_stone_hoe": "Stone Hoe",
+	"item.actuallyusefulsmithingtable.obsidian_plated_netherite_hoe": "Netherite Hoe",
+	
+	"item.actuallyusefulsmithingtable.obsidian_plated_wooden_shovel": "Wooden Shovel",
+	"item.actuallyusefulsmithingtable.obsidian_plated_golden_shovel": "Golden Shovel",
+	"item.actuallyusefulsmithingtable.obsidian_plated_iron_shovel": "Iron Shovel",
+	"item.actuallyusefulsmithingtable.obsidian_plated_copper_shovel": "Copper Shovel",
+	"item.actuallyusefulsmithingtable.obsidian_plated_diamond_shovel": "Diamond Shovel",
+	"item.actuallyusefulsmithingtable.obsidian_plated_stone_shovel": "Stone Shovel",
+	"item.actuallyusefulsmithingtable.obsidian_plated_netherite_shovel": "Netherite Shovel",
+	
+	"item.actuallyusefulsmithingtable.quartz_sharpened_wooden_sword": "Wooden Sword",
+	"item.actuallyusefulsmithingtable.quartz_sharpened_stone_sword": "Stone Sword",
+	"item.actuallyusefulsmithingtable.quartz_sharpened_golden_sword": "Golden Sword",
+	"item.actuallyusefulsmithingtable.quartz_sharpened_copper_sword": "Copper Sword",
+	"item.actuallyusefulsmithingtable.quartz_sharpened_iron_sword": "Iron Sword",
+	"item.actuallyusefulsmithingtable.quartz_sharpened_diamond_sword": "Diamond Sword",
+	"item.actuallyusefulsmithingtable.quartz_sharpened_netherite_sword": "Netherite Sword"
+}
