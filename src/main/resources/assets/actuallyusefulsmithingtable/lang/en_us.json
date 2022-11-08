@@ -43,5 +43,13 @@
 	"item.actuallyusefulsmithingtable.quartz_sharpened_copper_sword": "Copper Sword",
 	"item.actuallyusefulsmithingtable.quartz_sharpened_iron_sword": "Iron Sword",
 	"item.actuallyusefulsmithingtable.quartz_sharpened_diamond_sword": "Diamond Sword",
-	"item.actuallyusefulsmithingtable.quartz_sharpened_netherite_sword": "Netherite Sword"
+	"item.actuallyusefulsmithingtable.quartz_sharpened_netherite_sword": "Netherite Sword",
+	
+	"item.actuallyusefulsmithingtable.copper_helmet": "Copper Helmet",
+	"item.actuallyusefulsmithingtable.copper_chestplate": "Copper Chestplate",
+	"item.actuallyusefulsmithingtable.copper_leggings": "Copper Leggings",
+	"item.actuallyusefulsmithingtable.copper_boots": "Copper Boots",
+	
+	"item.actuallyusefulsmithingtable.copper_horse_armor": "Copper Horse Armor",
+	"item.actuallyusefulsmithingtable.netherite_horse_armor": "Netherite Horse Armor"
 }
