@@ -3,6 +3,7 @@ package com.gmail.rohzek.smithtable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.gmail.rohzek.smithtable.armor.AUSArmor;
 import com.gmail.rohzek.smithtable.items.ActuallyUsefulSmithingItems;
 import com.gmail.rohzek.smithtable.lib.ConfigurationManager;
 import com.gmail.rohzek.smithtable.lib.DeferredRegistration;
@@ -24,6 +25,7 @@ public class ActuallyUsefulSmithingTable
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 		DeferredRegistration.register();
 		ActuallyUsefulSmithingItems.register();
+		AUSArmor.register();
 		
 		// Register configuration file
 		final ModLoadingContext modLoadingContext = ModLoadingContext.get();
