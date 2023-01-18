@@ -1,0 +1,13 @@
+{
+  "type": "actuallyusefulsmithingtable:smithing_table",
+  "base": {
+    "item": "actuallyusefulsmithingtable:quartz_sharpened_golden_sword"
+  },
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "result": {
+    "item": "actuallyusefulsmithingtable:quartz_sharpened_diamond_sword"
+  },
+  "difficulty": "easy"
+}

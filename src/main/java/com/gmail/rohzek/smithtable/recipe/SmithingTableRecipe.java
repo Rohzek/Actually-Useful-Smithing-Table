@@ -24,38 +24,41 @@ public class SmithingTableRecipe extends SmithingRecipe
 	final Ingredient input;
 	final Ingredient upgrader;
 	final ItemStack output;
+	final String difficulty;
 	
-	public SmithingTableRecipe(ResourceLocation location, Ingredient input, Ingredient upgrader, ItemStack output) 
+	public SmithingTableRecipe(ResourceLocation location, Ingredient input, Ingredient upgrader, ItemStack output, String difficulty) 
 	{
 		super(location, input, upgrader, output);
 		
 		this.input = input;
 		this.upgrader = upgrader;
 		this.output = output;
+		this.difficulty = difficulty;
 	}
 	
 	@Override
 	public boolean matches(IInventory container, World world) 
-	{
-		if(ConfigurationManager.GENERAL.difficulty.get().toLowerCase().contains("hard") && !upgrader.getItems()[0].getDisplayName().toString().toLowerCase().contains("block")) 
-		{	
-			return false;
-		}
+	{	
+		String gameDiff = ConfigurationManager.GENERAL.difficulty.get().toLowerCase(), 
+			   itemDiff = difficulty.toLowerCase();
 		
-		if(ConfigurationManager.GENERAL.difficulty.get().toLowerCase().contains("easy") && upgrader.getItems()[0].getDisplayName().toString().toLowerCase().contains("block")) 
-		{	
-			return false;
-		}
-		
-		if(ConfigurationManager.GENERAL.difficulty.get().toLowerCase().contains("normal") && !ConfigurationManager.GENERAL.repairOnNormal.get() && upgrader.getItems()[0].getDisplayName().toString().toLowerCase().contains("block")) 
-		{	
-			return false;
-		}
-		
-		else 
+		// Block recipes if they aren't for the selected gamemode, upgrade mod recipes are always allowed
+		if(gameDiff.equals("hard") && itemDiff.equals("easy")) 
 		{
-			return super.matches(container, world);
+			return false;
 		}
+		
+		if(gameDiff.equals("easy") && itemDiff.equals("hard")) 
+		{
+			return false;
+		}
+		
+		if(gameDiff.equals("normal") && !ConfigurationManager.GENERAL.repairOnNormal.get() && itemDiff.equals("hard")) 
+		{
+			return false;
+		}
+		
+		return super.matches(container, world);
 	}
 	
 	@Override
@@ -160,8 +163,9 @@ public class SmithingTableRecipe extends SmithingRecipe
 			Ingredient ingredient = Ingredient.fromJson(JSONUtils.getAsJsonObject(json, "base"));
 	        Ingredient ingredient1 = Ingredient.fromJson(JSONUtils.getAsJsonObject(json, "addition"));
 	        ItemStack itemstack = ShapedRecipe.itemFromJson(JSONUtils.getAsJsonObject(json, "result"));
+	        String difficulty = JSONUtils.getAsString(json, "difficulty");
 	        
-	        return new SmithingTableRecipe(location, ingredient, ingredient1, itemstack);
+	        return new SmithingTableRecipe(location, ingredient, ingredient1, itemstack, difficulty);
 		}
 
 		@Override
@@ -170,8 +174,9 @@ public class SmithingTableRecipe extends SmithingRecipe
 			Ingredient ingredient = Ingredient.fromNetwork(bytebuf);
 	        Ingredient ingredient1 = Ingredient.fromNetwork(bytebuf);
 	        ItemStack itemstack = bytebuf.readItem();
+	        String difficulty = bytebuf.readUtf();
 	        
-	        return new SmithingTableRecipe(location, ingredient, ingredient1, itemstack);
+	        return new SmithingTableRecipe(location, ingredient, ingredient1, itemstack, difficulty);
 		}
 
 		@Override
@@ -180,6 +185,7 @@ public class SmithingTableRecipe extends SmithingRecipe
 			recipe.input.toNetwork(bytebuf);
 			recipe.upgrader.toNetwork(bytebuf);
 	        bytebuf.writeItem(recipe.output);
+	        bytebuf.writeUtf(recipe.difficulty);
 		}
 
 		@Override

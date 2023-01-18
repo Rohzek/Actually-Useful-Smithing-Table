@@ -1,0 +1,13 @@
+{
+  "type": "actuallyusefulsmithingtable:smithing_table",
+  "base": {
+    "item": "mvw:gold_sickle"
+  },
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "result": {
+    "item": "mvw:diamond_sickle"
+  },
+  "difficulty": "easy"
+}
