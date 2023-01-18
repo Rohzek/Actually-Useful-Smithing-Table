@@ -30,5 +30,12 @@ public class ActuallyUsefulSmithingTable
 		// Register configuration file
 		final ModLoadingContext modLoadingContext = ModLoadingContext.get();
 		modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigurationManager.spec);
+		
+		/**
+		 * To use any wooden planks use:
+		 * "tag": "minecraft:planks"
+		 * To use any stone that can be used to make tools:
+		 * "tag": "minecraft:stone_tool_materials"
+		 */
 	}
 }

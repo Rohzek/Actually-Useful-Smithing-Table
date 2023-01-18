@@ -1,0 +1,21 @@
+{
+  "type": "actuallyusefulsmithingtable:smithing_table",
+  "group": "tools",
+  "pattern": [
+    "C",
+    "C",
+    "S"
+  ],
+  "key": {
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "actuallyusefulsmithingtable:copper_sword",
+	"count": 1
+  }
+}

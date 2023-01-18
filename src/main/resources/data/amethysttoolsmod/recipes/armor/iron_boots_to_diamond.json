@@ -1,0 +1,13 @@
+{
+    "type": "actuallyusefulsmithingtable:smithing_table",
+    "base": {
+      "item": "amethysttoolsmod:iron_boots_amethyst"
+    },
+    "addition": {
+      "item": "minecraft:diamond"
+    },
+    "result": {
+      "item": "amethysttoolsmod:diamond_boots_amethyst"
+    },
+    "difficulty": "easy"
+  }

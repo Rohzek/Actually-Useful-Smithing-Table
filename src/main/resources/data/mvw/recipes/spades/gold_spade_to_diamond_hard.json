@@ -1,0 +1,13 @@
+{
+  "type": "actuallyusefulsmithingtable:smithing_table",
+  "base": {
+    "item": "mvw:gold_spade"
+  },
+  "addition": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": {
+    "item": "mvw:diamond_spade"
+  },
+  "difficulty": "hard"
+}

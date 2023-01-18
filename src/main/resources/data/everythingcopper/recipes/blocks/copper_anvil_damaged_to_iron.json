@@ -1,0 +1,13 @@
+{
+    "type": "actuallyusefulsmithingtable:smithing_table",
+    "base": {
+      "tag": "forge:anvils_damaged/copper"
+    },
+    "addition": {
+      "item": "minecraft:iron_block"
+    },
+    "result": {
+      "item": "minecraft:damaged_anvil"
+    },
+    "difficulty": "upgrade"
+  }
