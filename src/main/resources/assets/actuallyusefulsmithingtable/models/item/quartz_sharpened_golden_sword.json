@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "actuallyusefulsmithingtable:items/quartz_sharpened_golden_sword"
+        "layer0": "actuallyusefulsmithingtable:item/quartz_sharpened_golden_sword"
     }
 }

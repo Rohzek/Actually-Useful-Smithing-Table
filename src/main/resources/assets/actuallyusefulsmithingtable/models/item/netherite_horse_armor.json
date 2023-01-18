@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "actuallyusefulsmithingtable:items/netherite_horse_armor"
+        "layer0": "actuallyusefulsmithingtable:item/netherite_horse_armor"
     }
 }

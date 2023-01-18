@@ -1,0 +1,13 @@
+{
+  "type": "actuallyusefulsmithingtable:smithing_table",
+  "base": {
+    "item": "minecraft:leather_leggings"
+  },
+  "addition": {
+    "item": "minecraft:iron_nugget"
+  },
+  "result": {
+    "item": "minecraft:chainmail_leggings"
+  },
+  "difficulty": "easy"
+}
