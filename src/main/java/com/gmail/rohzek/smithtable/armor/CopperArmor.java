@@ -8,7 +8,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -17,7 +16,7 @@ public class CopperArmor extends ArmorItem
 
 	public CopperArmor(ArmorMaterial material, EquipmentSlot slot) 
 	{
-		super(material, slot, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).stacksTo(1));
+		super(material, slot, new Item.Properties().stacksTo(1));
 	}
 	
 	@Override

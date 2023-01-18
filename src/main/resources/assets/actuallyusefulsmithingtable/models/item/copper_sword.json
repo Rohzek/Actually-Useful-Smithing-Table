@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "actuallyusefulsmithingtable:items/copper_sword"
+        "layer0": "actuallyusefulsmithingtable:item/copper_sword"
     }
 }

@@ -14,27 +14,27 @@ public class SmithingItemObsidianShovel extends SmithingItemShovel
 	@Override
 	public int getMaxDamage(ItemStack stack) 
 	{
-		if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_NETHERITE.get()) 
+		if(stack.getItem() == AUSItems.OBSIDIANIZED_SHOVEL_NETHERITE.get()) 
 		{
 			return Items.NETHERITE_SHOVEL.getMaxDamage(new ItemStack(Items.NETHERITE_SHOVEL)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_DIAMOND.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_SHOVEL_DIAMOND.get()) 
 		{
 			return Items.DIAMOND_SHOVEL.getMaxDamage(new ItemStack(Items.DIAMOND_SHOVEL)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_GOLD.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_SHOVEL_GOLD.get()) 
 		{
 			return Items.GOLDEN_SHOVEL.getMaxDamage(new ItemStack(Items.GOLDEN_SHOVEL)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_STONE.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_SHOVEL_STONE.get()) 
 		{
 			return Items.STONE_SHOVEL.getMaxDamage(new ItemStack(Items.STONE_SHOVEL)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_SHOVEL_WOOD.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_SHOVEL_WOOD.get()) 
 		{
 			return Items.WOODEN_SHOVEL.getMaxDamage(new ItemStack(Items.WOODEN_SHOVEL)) + 500;
 		}

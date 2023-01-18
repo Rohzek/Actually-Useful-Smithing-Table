@@ -1,7 +1,5 @@
 package com.gmail.rohzek.smithtable.lib;
 
-import org.apache.logging.log4j.Level;
-
 import com.gmail.rohzek.smithtable.ActuallyUsefulSmithingTable;
 
 
@@ -9,6 +7,14 @@ public class LogHelper
 {
 	public static void Log(String message) 
 	{
-		ActuallyUsefulSmithingTable.LOGGER.log(Level.ALL, message);
+		ActuallyUsefulSmithingTable.LOGGER.info(message);
+	}
+	
+	public static void Debug(String message) 
+	{
+		if(ConfigurationManager.GENERAL.isDebug.get()) 
+		{
+			ActuallyUsefulSmithingTable.LOGGER.debug(message);
+		}
 	}
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "actuallyusefulsmithingtable:items/obsidian_plated_wooden_hoe"
+        "layer0": "actuallyusefulsmithingtable:item/obsidian_plated_wooden_hoe"
     }
 }

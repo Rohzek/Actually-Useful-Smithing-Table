@@ -14,27 +14,27 @@ public class SmithingItemObsidianHoe extends SmithingItemHoe
 	@Override
 	public int getMaxDamage(ItemStack stack) 
 	{
-		if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_NETHERITE.get()) 
+		if(stack.getItem() == AUSItems.OBSIDIANIZED_HOE_NETHERITE.get()) 
 		{
 			return Items.NETHERITE_HOE.getMaxDamage(new ItemStack(Items.NETHERITE_HOE)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_DIAMOND.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_HOE_DIAMOND.get()) 
 		{
 			return Items.DIAMOND_HOE.getMaxDamage(new ItemStack(Items.DIAMOND_HOE)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_GOLD.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_HOE_GOLD.get()) 
 		{
 			return Items.GOLDEN_HOE.getMaxDamage(new ItemStack(Items.GOLDEN_HOE)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_STONE.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_HOE_STONE.get()) 
 		{
 			return Items.STONE_HOE.getMaxDamage(new ItemStack(Items.STONE_HOE)) + 500;
 		}
 		
-		else if(stack.getItem() == ActuallyUsefulSmithingItems.OBSIDIANIZED_HOE_WOOD.get()) 
+		else if(stack.getItem() == AUSItems.OBSIDIANIZED_HOE_WOOD.get()) 
 		{
 			return Items.WOODEN_HOE.getMaxDamage(new ItemStack(Items.WOODEN_HOE)) + 500;
 		}

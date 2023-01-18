@@ -5,7 +5,7 @@ import com.gmail.rohzek.smithtable.lib.DeferredRegistration;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.registries.RegistryObject;
 
-public class AUSArmor 
+public class AUSArmors 
 {
 	public static final RegistryObject<CopperArmor> COPPER_HELMET = DeferredRegistration.ITEMS.register("copper_helmet", () -> new CopperArmor(CopperArmorMaterial.COPPER, EquipmentSlot.HEAD));
 	public static final RegistryObject<CopperArmor> COPPER_CHESTPLATE = DeferredRegistration.ITEMS.register("copper_chestplate", () -> new CopperArmor(CopperArmorMaterial.COPPER, EquipmentSlot.CHEST));
