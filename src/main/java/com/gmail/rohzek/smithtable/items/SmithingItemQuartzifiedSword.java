@@ -18,10 +18,12 @@ public class SmithingItemQuartzifiedSword extends SmithingItemSword
 	{
 		super.onCraftedBy(itemstack, world, player);
 		
-		int sharpnessLevel = itemstack.getEnchantmentLevel(Enchantments.SHARPNESS) + 1;
+		//int sharpnessLevel = itemstack.getEnchantmentLevel(Enchantments.SHARPNESS) + 1;
 		
 		// Should remove current sharpness level if it exists, and replace it with the stronger one.
-		
-		itemstack.enchant(Enchantments.SHARPNESS, sharpnessLevel);
+		if(!itemstack.isEnchanted()) 
+		{
+			itemstack.enchant(Enchantments.SHARPNESS, 3);
+		}
 	}
 }

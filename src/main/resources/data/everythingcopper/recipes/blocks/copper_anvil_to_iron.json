@@ -1,0 +1,13 @@
+{
+    "type": "actuallyusefulsmithingtable:smithing_table",
+    "base": {
+      "tag": "forge:anvils/copper"
+    },
+    "addition": {
+      "item": "minecraft:iron_block"
+    },
+    "result": {
+      "item": "minecraft:anvil"
+    },
+    "difficulty": "upgrade"
+  }

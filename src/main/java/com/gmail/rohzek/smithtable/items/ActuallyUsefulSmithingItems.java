@@ -8,6 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ActuallyUsefulSmithingItems 
 {
+	//minecraft:obsidian
 	//actuallyusefulsmithingtable
 	public static final RegistryObject<Item> AXE_COPPER = DeferredRegistration.ITEMS.register("copper_axe", () -> new SmithingItemAxe(Tiers.IRON, 1, -2.8f));
 	public static final RegistryObject<Item> PICKAXE_COPPER = DeferredRegistration.ITEMS.register("copper_pickaxe", () -> new SmithingItemPickaxe(Tiers.IRON, 1, -2.8f));
@@ -55,9 +56,5 @@ public class ActuallyUsefulSmithingItems
 	public static final RegistryObject<Item> QUARTZIFIED_SWORD_DIAMOND = DeferredRegistration.ITEMS.register("quartz_sharpened_diamond_sword", () -> new SmithingItemQuartzifiedSword(Tiers.DIAMOND, 3, -2.4f));
 	public static final RegistryObject<Item> QUARTZIFIED_SWORD_NETHERITE = DeferredRegistration.ITEMS.register("quartz_sharpened_netherite_sword", () -> new SmithingItemQuartzifiedSword(Tiers.NETHERITE, 3, -2.4f));
 	
-	
-	public static final RegistryObject<Item> COPPER_HORSE_ARMOR = DeferredRegistration.ITEMS.register("copper_horse_armor", () -> new SmithingHorseArmor(4, "copper"));
-	public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = DeferredRegistration.ITEMS.register("netherite_horse_armor", () -> new SmithingHorseArmor(15, "netherite"));
-
 	public static void register() {}
 }

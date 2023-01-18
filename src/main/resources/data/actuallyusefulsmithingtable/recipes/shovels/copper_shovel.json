@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "tools",
+  "pattern": [
+    "C",
+    "S",
+    "S"
+  ],
+  "key": {
+    "C": {
+      "tag": "forge:ingots/copper"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "actuallyusefulsmithingtable:copper_shovel",
+	"count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "actuallyusefulsmithingtable:smithing_table",
+  "base": {
+    "item": "mvw:iron_rapier"
+  },
+  "addition": {
+    "item": "minecraft:gold_block"
+  },
+  "result": {
+    "item": "mvw:gold_rapier"
+  },
+  "difficulty": "hard"
+}
