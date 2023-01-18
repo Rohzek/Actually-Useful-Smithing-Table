@@ -1,3 +1,4 @@
+
 package com.gmail.rohzek.smithtable.lib;
 
 import com.gmail.rohzek.smithtable.recipe.SmithingTableRecipe;
