@@ -1,5 +1,11 @@
 {
   "type": "actuallyusefulsmithingtable:smithing_table",
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  },
   "base": {
     "item": "minecraft:wooden_pickaxe"
   },

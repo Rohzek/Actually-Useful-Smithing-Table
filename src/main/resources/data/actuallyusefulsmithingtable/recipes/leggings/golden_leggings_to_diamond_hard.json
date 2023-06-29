@@ -1,5 +1,8 @@
 {
   "type": "actuallyusefulsmithingtable:smithing_table",
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  },
   "base": {
     "item": "minecraft:golden_leggings"
   },

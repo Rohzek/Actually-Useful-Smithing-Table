@@ -1,21 +1,16 @@
 package com.gmail.rohzek.smithtable.event;
 
-import com.gmail.rohzek.smithtable.armor.AUSArmors;
-import com.gmail.rohzek.smithtable.horsearmor.AUSHorseArmors;
-import com.gmail.rohzek.smithtable.items.AUSItems;
-
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class CreativeTabsEvent 
 {
 	public void registerCreativeTabs(IEventBus modEventBus) 
 	{
-		modEventBus.addListener(this::addCreative);
+		//modEventBus.addListener(this::addCreative);
 	}
 	
-	private void addCreative(CreativeModeTabEvent.BuildContents event)
+	/*
+	private void addCreative(CreativeModeTabRegistry event)
     {       
         if (event.getTab() == CreativeModeTabs.COMBAT) 
         {
@@ -72,4 +67,5 @@ public class CreativeTabsEvent
         	event.accept(AUSItems.QUARTZIFIED_SWORD_NETHERITE);
         }
     }
+    */
 }

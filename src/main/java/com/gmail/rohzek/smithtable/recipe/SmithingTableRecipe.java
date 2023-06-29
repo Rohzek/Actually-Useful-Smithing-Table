@@ -6,6 +6,7 @@ import com.gmail.rohzek.smithtable.lib.ConfigurationManager;
 import com.gmail.rohzek.smithtable.lib.Reference;
 import com.google.gson.JsonObject;
 
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
@@ -16,20 +17,22 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapedRecipe;
-import net.minecraft.world.item.crafting.UpgradeRecipe;
+import net.minecraft.world.item.crafting.SmithingTrimRecipe;
 import net.minecraft.world.level.Level;
 
-public class SmithingTableRecipe extends UpgradeRecipe
+public class SmithingTableRecipe extends SmithingTrimRecipe
 {
+	final Ingredient template;
 	final Ingredient input;
 	final Ingredient upgrader;
 	final ItemStack output;
 	final String difficulty;
 	
-	public SmithingTableRecipe(ResourceLocation location, Ingredient input, Ingredient upgrader, ItemStack output, String difficulty) 
+	public SmithingTableRecipe(ResourceLocation location, Ingredient template, Ingredient input, Ingredient upgrader, ItemStack output, String difficulty) 
 	{
-		super(location, input, upgrader, output);
+		super(location, template, input, upgrader);
 		
+		this.template = template;
 		this.input = input;
 		this.upgrader = upgrader;
 		this.output = output;
@@ -62,10 +65,11 @@ public class SmithingTableRecipe extends UpgradeRecipe
 	}
 	
 	@Override
-	public ItemStack assemble(Container container) 
+	public ItemStack assemble(Container container, RegistryAccess regAccess) 
 	{
-		ItemStack itemstack = this.output.copy();
-		ItemStack input = container.getItem(0);
+		ItemStack itemstack = this.output;
+		//ItemStack template = container.getItem(0);
+		ItemStack input = container.getItem(1);
 		CompoundTag compoundtag = input.getTag();
 		
 	      if (compoundtag != null) 
@@ -160,31 +164,34 @@ public class SmithingTableRecipe extends UpgradeRecipe
 		@Override
 		public SmithingTableRecipe fromJson(ResourceLocation location, JsonObject json) 
 		{
+			Ingredient template = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "template"));
 			Ingredient ingredient = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "base"));
 	        Ingredient ingredient1 = Ingredient.fromJson(GsonHelper.getAsJsonObject(json, "addition"));
 	        ItemStack itemstack = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "result"));
 	        String difficulty = GsonHelper.getAsString(json, "difficulty");
 	        
-	        return new SmithingTableRecipe(location, ingredient, ingredient1, itemstack, difficulty);
+	        return new SmithingTableRecipe(location, template, ingredient, ingredient1, itemstack, difficulty);
 		}
 
 		@Override
 		public @Nullable SmithingTableRecipe fromNetwork(ResourceLocation location, FriendlyByteBuf bytebuf) 
 		{
+			Ingredient template = Ingredient.fromNetwork(bytebuf);
 			Ingredient ingredient = Ingredient.fromNetwork(bytebuf);
 	        Ingredient ingredient1 = Ingredient.fromNetwork(bytebuf);
 	        ItemStack itemstack = bytebuf.readItem();
 	        String difficulty = bytebuf.readUtf();
 	        
-	        return new SmithingTableRecipe(location, ingredient, ingredient1, itemstack, difficulty);
+	        return new SmithingTableRecipe(location, template, ingredient, ingredient1, itemstack, difficulty);
 		}
 
 		@Override
 		public void toNetwork(FriendlyByteBuf bytebuf, SmithingTableRecipe recipe) 
 		{
+			recipe.template.toNetwork(bytebuf);
 			recipe.input.toNetwork(bytebuf);
 			recipe.upgrader.toNetwork(bytebuf);
-	        bytebuf.writeItem(recipe.output);
+			bytebuf.writeItem(recipe.output);
 	        bytebuf.writeUtf(recipe.difficulty);
 		}
 		

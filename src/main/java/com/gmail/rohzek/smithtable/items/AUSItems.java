@@ -57,5 +57,8 @@ public class AUSItems
 	public static final RegistryObject<Item> QUARTZIFIED_SWORD_DIAMOND = DeferredRegistration.ITEMS.register("quartz_sharpened_diamond_sword", () -> new SmithingItemQuartzifiedSword(Tiers.DIAMOND, 3, -2.4f));
 	public static final RegistryObject<Item> QUARTZIFIED_SWORD_NETHERITE = DeferredRegistration.ITEMS.register("quartz_sharpened_netherite_sword", () -> new SmithingItemQuartzifiedSword(Tiers.NETHERITE, 3, -2.4f));
 	
+	public static final RegistryObject<Item> SMITHING_TEMPLATE = DeferredRegistration.ITEMS.register("smithing_template", () -> new SmithingTemplateUpgrades());
+	
+	
 	public static void register() {}
 }

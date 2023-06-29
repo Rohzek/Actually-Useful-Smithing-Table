@@ -14,7 +14,7 @@ import net.minecraft.world.item.ItemStack;
 public class CopperArmor extends ArmorItem
 {
 
-	public CopperArmor(ArmorMaterial material, EquipmentSlot slot) 
+	public CopperArmor(ArmorMaterial material, Type slot) 
 	{
 		super(material, slot, new Item.Properties().stacksTo(1));
 	}

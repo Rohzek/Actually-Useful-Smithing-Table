@@ -2,7 +2,7 @@ package com.gmail.rohzek.smithtable.armor;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -34,6 +34,7 @@ public enum CopperArmorMaterial implements ArmorMaterial
 		this.maxDamageFactor = maxDamageFactor;
 		this.damageReductionAmountArray = damageReductionAmountArray;
 		this.enchantability = enchantability;
+		this.soundEvent = soundEvent;
 		this.toughness = toughness;
 		this.knockback = knockbackResistance;
 		this.repairMaterial = ingredient;
@@ -43,17 +44,17 @@ public enum CopperArmorMaterial implements ArmorMaterial
 	{
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
-	public int getDurabilityForSlot(EquipmentSlot slot) 
+	public int getDurabilityForType(Type slot) 
 	{
-		return MAX_DAMAGE_ARRAY[slot.getIndex()] * this.maxDamageFactor;
+		return MAX_DAMAGE_ARRAY[slot.getSlot().getIndex()] * this.maxDamageFactor;
 	}
 
 	@Override
-	public int getDefenseForSlot(EquipmentSlot slot) 
+	public int getDefenseForType(Type slot) 
 	{
-		return this.damageReductionAmountArray[slot.getIndex()];
+		return this.damageReductionAmountArray[slot.getSlot().getIndex()];
 	}
 
 	@Override
