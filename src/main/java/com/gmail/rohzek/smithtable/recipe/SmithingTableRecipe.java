@@ -113,6 +113,12 @@ public class SmithingTableRecipe extends SmithingTrimRecipe
 	      return itemstack;
 	}
 	
+	@Override
+	public ItemStack getResultItem(RegistryAccess access) 
+	{
+		return this.output;
+	}
+	
 	/**
 	 * @param x: The current amount of damage on current tool
 	 * @param y: The current max damage of the current tool
