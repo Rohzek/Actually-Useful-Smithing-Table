@@ -45,7 +45,7 @@ public class SmithingTableRecipe extends SmithingTrimRecipe
 		String gameDiff = ConfigurationManager.GENERAL.difficulty.get().toLowerCase(), 
 			   itemDiff = difficulty.toLowerCase();
 			
-			// Block recipes if they aren't for the selected gamemode, upgrade mod recipes are always allowed
+			// Block recipes if they aren't for the selected difficulty, 'upgrade' type recipes are always allowed
 			if(gameDiff.equals("hard") && itemDiff.equals("easy")) 
 			{
 				return false;
@@ -77,7 +77,7 @@ public class SmithingTableRecipe extends SmithingTrimRecipe
 	         itemstack.setTag(compoundtag.copy());
 	      }
 	      
-	      // If on easy mode, or normal with repairing blocks and a block is provided, we should fully repair tools
+	      // If on easy mode, or normal with 'repairing blocks' enabled and a block is provided, we should fully repair tools
 	      if(!ConfigurationManager.GENERAL.difficulty.get().toLowerCase().contains("hard"))
 	      {
 	    	  if(ConfigurationManager.GENERAL.difficulty.get().toLowerCase().contains("easy")) 
