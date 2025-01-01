@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_block"
+  },
+  "base": {
+    "item": "minecraft:chainmail_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:copper_chestplate"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

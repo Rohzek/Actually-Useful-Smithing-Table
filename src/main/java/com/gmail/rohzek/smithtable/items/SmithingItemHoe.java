@@ -8,6 +8,6 @@ public class SmithingItemHoe extends HoeItem
 {
 	public SmithingItemHoe(Tier tier, int attackDamageIn, float attackSpeedIn) 
 	{
-		super(tier, attackDamageIn, attackSpeedIn, new Item.Properties());
+		super(tier, new Item.Properties().attributes(HoeItem.createAttributes(tier, attackDamageIn, attackSpeedIn)));
 	}
 }

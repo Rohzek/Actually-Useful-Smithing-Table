@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:diamond_block"
+  },
+  "base": {
+    "item": "actuallyusefulsmithingtable:quartz_sharpened_golden_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:quartz_sharpened_diamond_sword"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

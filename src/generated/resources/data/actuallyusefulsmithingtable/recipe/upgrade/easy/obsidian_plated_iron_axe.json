@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "actuallyusefulsmithingtable:config"
+      }
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:iron_ingot"
+  },
+  "base": {
+    "item": "actuallyusefulsmithingtable:obsidian_plated_copper_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:obsidian_plated_iron_axe"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

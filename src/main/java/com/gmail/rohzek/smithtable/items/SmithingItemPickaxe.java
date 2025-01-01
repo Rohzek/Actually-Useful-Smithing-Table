@@ -8,6 +8,6 @@ public class SmithingItemPickaxe extends PickaxeItem
 {
 	public SmithingItemPickaxe(Tier tier, int attackDamageIn, float attackSpeedIn) 
 	{
-		super(tier, attackDamageIn, attackSpeedIn, new Item.Properties());
+		super(tier, new Item.Properties().attributes(PickaxeItem.createAttributes(tier, attackDamageIn, attackSpeedIn)));
 	}
 }

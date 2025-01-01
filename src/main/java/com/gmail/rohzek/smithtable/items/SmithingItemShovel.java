@@ -8,6 +8,6 @@ public class SmithingItemShovel extends ShovelItem
 {
 	public SmithingItemShovel(Tier tier, float attackDamageIn, float attackSpeedIn) 
 	{
-		super(tier, attackDamageIn, attackSpeedIn, new Item.Properties());
+		super(tier, new Item.Properties().attributes(ShovelItem.createAttributes(tier, attackDamageIn, attackSpeedIn)));
 	}
 }

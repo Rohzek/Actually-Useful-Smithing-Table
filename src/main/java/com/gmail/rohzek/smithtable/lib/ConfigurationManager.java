@@ -1,21 +1,23 @@
 package com.gmail.rohzek.smithtable.lib;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-public class ConfigurationManager 
+import java.util.List;
+
+public class ConfigurationManager
 {
-	private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+	private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     public static final General GENERAL = new General(BUILDER);
-    public static final ForgeConfigSpec spec = BUILDER.build();
+    public static final ModConfigSpec spec = BUILDER.build();
     
     public static class General 
     {
-    	public final ForgeConfigSpec.ConfigValue<Boolean> isDebug;
-    	public final ForgeConfigSpec.ConfigValue<String> difficulty;
-    	public final ForgeConfigSpec.ConfigValue<Boolean> repairOnNormal;
-    	public final ForgeConfigSpec.ConfigValue<Boolean> repairOnHard;
+    	public final ModConfigSpec.ConfigValue<Boolean> isDebug;
+    	public final ModConfigSpec.ConfigValue<String> difficulty;
+    	public final ModConfigSpec.ConfigValue<Boolean> repairOnNormal;
+    	public final ModConfigSpec.ConfigValue<Boolean> repairOnHard;
     	
-    	public General(ForgeConfigSpec.Builder builder) 
+    	public General(ModConfigSpec.Builder builder)
         {
             builder.push("General");
             
@@ -27,7 +29,7 @@ public class ConfigurationManager
             difficulty = builder
             		.comment("Determines the difficulty level of the recipes. On easy mode all upgrades take ingots, and repair tools. On hard, only blocks upgrade tools, and only non-game-breaking repair occurs [easy/normal/hard|default:normal]")
             		.translation("difficulty." + Reference.MODID + ".config")
-            		.define("difficulty", "normal");
+		            .define("difficulty", "normal", value -> value != null && List.of("easy","hard","normal").contains(value));
             
             repairOnNormal = builder
                     .comment("Enables/Disables using Blocks of metal to fully repair tools while on normal mode (disables Block usage on Normal mode) [false/true|default:true]")

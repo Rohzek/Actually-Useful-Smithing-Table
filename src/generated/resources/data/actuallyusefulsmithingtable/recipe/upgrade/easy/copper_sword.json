@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "actuallyusefulsmithingtable:config"
+      }
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_ingot"
+  },
+  "base": {
+    "item": "minecraft:stone_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:copper_sword"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:obsidian"
+  },
+  "base": {
+    "item": "minecraft:wooden_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:obsidian_plated_wooden_axe"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

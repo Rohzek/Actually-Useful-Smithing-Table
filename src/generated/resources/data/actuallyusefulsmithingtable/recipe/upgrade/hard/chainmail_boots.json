@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:chain"
+  },
+  "base": {
+    "item": "minecraft:leather_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:chainmail_boots"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:quartz_block"
+  },
+  "base": {
+    "item": "actuallyusefulsmithingtable:copper_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:quartz_sharpened_copper_sword"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "c:stones"
+  },
+  "base": {
+    "item": "actuallyusefulsmithingtable:obsidian_plated_wooden_hoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:obsidian_plated_stone_hoe"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}
