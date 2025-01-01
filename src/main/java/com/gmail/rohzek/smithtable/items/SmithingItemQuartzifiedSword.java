@@ -1,8 +1,12 @@
 package com.gmail.rohzek.smithtable.items;
 
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
@@ -23,7 +27,8 @@ public class SmithingItemQuartzifiedSword extends SmithingItemSword
 		// Should remove current sharpness level if it exists, and replace it with the stronger one.
 		if(!itemstack.isEnchanted()) 
 		{
-			itemstack.enchant(Enchantments.SHARPNESS, 3);
+			HolderLookup<Enchantment> enchantmentHolderLookup = world.holderLookup(Registries.ENCHANTMENT);
+			itemstack.enchant(enchantmentHolderLookup.get(Enchantments.SHARPNESS).orElseThrow(), 3);
 		}
 	}
 }

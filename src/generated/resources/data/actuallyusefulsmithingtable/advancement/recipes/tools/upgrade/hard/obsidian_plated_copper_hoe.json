@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "actuallyusefulsmithingtable:upgrade/hard/obsidian_plated_copper_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_upgrade_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_upgrade_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "actuallyusefulsmithingtable:upgrade/hard/obsidian_plated_copper_hoe"
+    ]
+  }
+}

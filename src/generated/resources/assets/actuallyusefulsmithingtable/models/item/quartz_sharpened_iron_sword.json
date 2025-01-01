@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "actuallyusefulsmithingtable:item/quartz_sharpened_iron_sword"
+  }
+}

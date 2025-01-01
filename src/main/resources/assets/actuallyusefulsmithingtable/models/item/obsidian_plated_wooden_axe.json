@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "actuallyusefulsmithingtable:item/obsidian_plated_wooden_axe"
-    }
-}

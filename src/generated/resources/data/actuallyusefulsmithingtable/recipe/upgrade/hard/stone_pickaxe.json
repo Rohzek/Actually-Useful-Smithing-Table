@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "c:stones"
+  },
+  "base": {
+    "item": "minecraft:wooden_pickaxe"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:stone_pickaxe"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}
