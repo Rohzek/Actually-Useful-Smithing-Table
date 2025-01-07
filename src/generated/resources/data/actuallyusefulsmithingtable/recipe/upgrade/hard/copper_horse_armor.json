@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "actuallyusefulsmithingtable:config"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:copper_block"
+  },
+  "base": {
+    "item": "minecraft:leather_horse_armor"
+  },
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:copper_horse_armor"
+  },
+  "template": {
+    "item": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

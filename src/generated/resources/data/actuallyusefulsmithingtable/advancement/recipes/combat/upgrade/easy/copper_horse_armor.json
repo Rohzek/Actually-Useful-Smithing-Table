@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "actuallyusefulsmithingtable:config"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "actuallyusefulsmithingtable:upgrade/easy/copper_horse_armor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_upgrade_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_upgrade_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "actuallyusefulsmithingtable:upgrade/easy/copper_horse_armor"
+    ]
+  }
+}

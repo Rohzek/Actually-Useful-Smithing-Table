@@ -35,6 +35,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		chestplateUpgrades(recipeOutput);
 		helmetUpgrades(recipeOutput);
 		leggingsUpgrades(recipeOutput);
+		horseArmors(recipeOutput);
 		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AUSItems.SMITHING_TEMPLATE)
 				.define('s', Tags.Items.STONES)
 				.define('r', Items.REDSTONE)
@@ -282,8 +283,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, Items.IRON_HORSE_ARMOR, Ingredient.of(Items.GOLD_BLOCK), RecipeCategory.COMBAT, Items.GOLDEN_HORSE_ARMOR, true);
 		materialUpgrade(recipeOutput, Items.GOLDEN_HORSE_ARMOR, Ingredient.of(Items.DIAMOND), RecipeCategory.COMBAT, Items.DIAMOND_HORSE_ARMOR, false);
 		materialUpgrade(recipeOutput, Items.GOLDEN_HORSE_ARMOR, Ingredient.of(Items.DIAMOND_BLOCK), RecipeCategory.COMBAT, Items.DIAMOND_HORSE_ARMOR, true);
-		materialUpgrade(recipeOutput, Items.DIAMOND_HORSE_ARMOR, Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, AUSArmors.NETHERITE_HORSE_ARMOR.get(), false);
-		materialUpgrade(recipeOutput, Items.DIAMOND_HORSE_ARMOR, Ingredient.of(Items.NETHERITE_BLOCK), RecipeCategory.COMBAT, AUSArmors.NETHERITE_HORSE_ARMOR.get(), true);
+		materialUpgradeVanillaStyle(recipeOutput, Items.DIAMOND_HORSE_ARMOR, Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, AUSArmors.NETHERITE_HORSE_ARMOR.get(), false);
+		materialUpgradeVanillaStyle(recipeOutput, Items.DIAMOND_HORSE_ARMOR, Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, AUSArmors.NETHERITE_HORSE_ARMOR.get(), true);
 	}
 
 	protected static void boots(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
@@ -386,6 +387,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	protected static void materialUpgrade(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard, String suffix) {
 		AUSUpgradeRecipeBuilder builder = AUSUpgradeRecipeBuilder.smithing(
 						Ingredient.of(AUSItems.SMITHING_TEMPLATE), Ingredient.of(baseItem), upgradeItem, category, resultItem
+				)
+				.unlocks("has_upgrade_item", has(upgradeItem.getItems()[0].getItem()));
+				if (isHard != null) builder.addCondition(isHard ? new ConfigCondition() : new NotCondition(new ConfigCondition()));
+				builder.save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Reference.MODID, "upgrade/" + (isHard == null ? "" : (isHard ? "hard/" : "easy/")) + getItemName(resultItem) + (suffix != null ? suffix : "")));
+	}
+	
+	protected static void materialUpgradeVanillaStyle(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard) {
+		materialUpgradeVanillaStyle(recipeOutput, baseItem, upgradeItem, category, resultItem, isHard, null);
+	}
+	
+	protected static void materialUpgradeVanillaStyle(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard, String suffix) {
+		AUSUpgradeRecipeBuilder builder = AUSUpgradeRecipeBuilder.smithing(
+						Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(baseItem), upgradeItem, category, resultItem
 				)
 				.unlocks("has_upgrade_item", has(upgradeItem.getItems()[0].getItem()));
 				if (isHard != null) builder.addCondition(isHard ? new ConfigCondition() : new NotCondition(new ConfigCondition()));

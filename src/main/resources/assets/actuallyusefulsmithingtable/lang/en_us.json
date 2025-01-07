@@ -54,6 +54,8 @@
 	"item.actuallyusefulsmithingtable.copper_horse_armor": "Copper Horse Armor",
 	"item.actuallyusefulsmithingtable.netherite_horse_armor": "Netherite Horse Armor",
 	
+	"item.actuallyusefulsmithingtable.smithing_template":"Smithing Template",
+	
 	"item.minecraft.smithing_template.tool_upgrade.additions_slot_description": "Put an upgrade material here",
 	"item.minecraft.smithing_template.tool_upgrade.applies_to": "Tools and Armor",
 	"item.minecraft.smithing_template.tool_upgrade.base_slot_description": "Put a piece of armor, a weapon or a tool here",
