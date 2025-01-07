@@ -1,4 +1,5 @@
 {
+	"itemGroup.actuallyusefulsmithingtable": "Actually Useful Smithing Table",
 	"item.actuallyusefulsmithingtable.copper_axe": "Copper Axe",
 	"item.actuallyusefulsmithingtable.copper_pickaxe": "Copper Pickaxe",
 	"item.actuallyusefulsmithingtable.copper_hoe": "Copper Hoe",
@@ -57,5 +58,11 @@
 	"item.minecraft.smithing_template.tool_upgrade.applies_to": "Tools and Armor",
 	"item.minecraft.smithing_template.tool_upgrade.base_slot_description": "Put a piece of armor, a weapon or a tool here",
 	"item.minecraft.smithing_template.tool_upgrade.ingredients": "Upgrade Material",
-	"upgrade.minecraft.tool_upgrade": "Tool and Armor Upgrade"
+	"upgrade.minecraft.tool_upgrade": "Tool and Armor Upgrade",
+
+	"actuallyusefulsmithingtable.configuration.General": "General",
+	"difficulty.actuallyusefulsmithingtable.config": "Difficulty",
+	"debugmode.actuallyusefulsmithingtable.config": "Debug Mode",
+	"repairmode.normal.actuallyusefulsmithingtable.config": "Repair Mode: Normal",
+	"repairmode.hard.actuallyusefulsmithingtable.config": "Repair Mode: Hard"
 }

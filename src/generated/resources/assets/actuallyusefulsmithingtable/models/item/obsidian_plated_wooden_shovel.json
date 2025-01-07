@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "actuallyusefulsmithingtable:item/obsidian_plated_wooden_shovel"
+  }
+}

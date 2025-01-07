@@ -9,7 +9,7 @@ public class SmithingItemSword extends SwordItem
 
 	public SmithingItemSword(Tier tier, int attackDamageIn, float attackSpeedIn) 
 	{
-		super(tier, attackDamageIn, attackSpeedIn, new Item.Properties());
+		super(tier, new Item.Properties().attributes(SwordItem.createAttributes(tier, attackDamageIn, attackSpeedIn)));
 	}
 
 }

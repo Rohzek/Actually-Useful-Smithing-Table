@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "s": {
+      "tag": "c:stones"
+    }
+  },
+  "pattern": [
+    "sss",
+    "srs",
+    "sss"
+  ],
+  "result": {
+    "count": 1,
+    "id": "actuallyusefulsmithingtable:smithing_template"
+  }
+}

@@ -9,7 +9,7 @@ public class SmithingItemAxe extends AxeItem
 
 	public SmithingItemAxe(Tier tier, float attackDamageIn, float attackSpeedIn) 
 	{
-		super(tier, attackDamageIn, attackSpeedIn, new Item.Properties());
+		super(tier, new Item.Properties().attributes(AxeItem.createAttributes(tier, attackDamageIn, attackSpeedIn)));
 	}
 	
 	

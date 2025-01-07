@@ -1,31 +1,47 @@
 
 package com.gmail.rohzek.smithtable.lib;
 
-import com.gmail.rohzek.smithtable.recipe.SmithingTableRecipe;
+import com.gmail.rohzek.smithtable.items.AUSItems;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import com.mojang.serialization.MapCodec;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.conditions.ICondition;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
+
+import java.util.function.Supplier;
 
 public class DeferredRegistration 
 {
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MODID);
-	public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Reference.MODID);
-	public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(ForgeRegistries.RECIPE_TYPES, Reference.MODID);
-	
-	public static final RegistryObject<RecipeSerializer<SmithingTableRecipe>> SMITHING_TABLE_RECIPE_SERIALIZER = RECIPE_SERIALIZERS.register("smithing_table", () -> SmithingTableRecipe.Serializer.INSTANCE);
-	
-	public static void register() 
+	public static final DeferredRegister.Items ITEMS = DeferredRegister.Items.createItems(Reference.MODID);
+	public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(BuiltInRegistries.ARMOR_MATERIAL, Reference.MODID);
+	public static final DeferredRegister<MapCodec<? extends ICondition>> CONDITION_CODECS = DeferredRegister.create(NeoForgeRegistries.Keys.CONDITION_CODECS, Reference.MODID);
+	private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, Reference.MODID);
+
+	public static void register(IEventBus bus)
 	{
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		
+		ARMOR_MATERIALS.register(bus);
 		ITEMS.register(bus);
-		RECIPE_SERIALIZERS.register(bus);
-		RECIPE_TYPES.register(bus);
+		CONDITION_CODECS.register(bus);
+		TABS.register(bus);
 	}
+
+	public static final DeferredHolder<MapCodec<? extends ICondition>, MapCodec<ConfigCondition>> CONFIG_CONDITION = CONDITION_CODECS.register("config", () -> ConfigCondition.CODEC);
+
+	public static final Supplier<CreativeModeTab> ITEM_GROUP = TABS.register(Reference.MODID, () -> CreativeModeTab.builder()
+			.title(Component.translatable("itemGroup." + Reference.MODID))
+			.icon(() -> new ItemStack(AUSItems.SMITHING_TEMPLATE.get()))
+			.displayItems((params, output) -> {
+				ITEMS.getEntries().forEach(entry -> {
+					output.accept(entry.get());
+				});
+			})
+			.build()
+	);
 }
