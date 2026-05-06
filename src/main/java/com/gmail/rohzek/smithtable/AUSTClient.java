@@ -9,8 +9,10 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
 @Mod(value=Reference.MODID, dist= Dist.CLIENT)
-public class AUSTClient {
-	public AUSTClient(IEventBus modEventBus, ModContainer modContainer) {
+public class AUSTClient 
+{
+	public AUSTClient(IEventBus modEventBus, ModContainer modContainer) 
+	{
 		modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
 	}
 }

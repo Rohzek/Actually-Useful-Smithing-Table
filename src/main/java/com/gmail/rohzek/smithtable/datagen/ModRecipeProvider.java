@@ -19,13 +19,16 @@ import net.neoforged.neoforge.common.conditions.NotCondition;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-	public ModRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder 
+{
+	public ModRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) 
+	{
 		super(packOutput, lookupProvider);
 	}
 
 	@Override
-	protected void buildRecipes(RecipeOutput recipeOutput) {
+	protected void buildRecipes(RecipeOutput recipeOutput) 
+	{
 		axes(recipeOutput);
 		pickaxes(recipeOutput);
 		shovels(recipeOutput);
@@ -46,7 +49,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	private static void axes(RecipeOutput recipeOutput) {
+	private static void axes(RecipeOutput recipeOutput) 
+	{
 		axe(recipeOutput, Tags.Items.INGOTS_COPPER, AUSItems.AXE_COPPER);
 		materialUpgrade(recipeOutput, AUSItems.AXE_COPPER.get(), Ingredient.of(Items.OBSIDIAN), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_AXE_COPPER.get(), null);
 		materialUpgrade(recipeOutput, AUSItems.AXE_COPPER.get(), Ingredient.of(Items.IRON_INGOT), RecipeCategory.TOOLS, Items.IRON_AXE, false);
@@ -79,7 +83,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, AUSItems.OBSIDIANIZED_AXE_WOOD.get(), Ingredient.of(Tags.Items.STONES), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_AXE_STONE.get(), true);
 	}
 
-	private static void pickaxes(RecipeOutput recipeOutput) {
+	private static void pickaxes(RecipeOutput recipeOutput) 
+	{
 		pickaxe(recipeOutput, Tags.Items.INGOTS_COPPER, AUSItems.PICKAXE_COPPER);
 		materialUpgrade(recipeOutput, AUSItems.PICKAXE_COPPER.get(), Ingredient.of(Items.OBSIDIAN), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_PICKAXE_COPPER.get(), null);
 		materialUpgrade(recipeOutput, AUSItems.PICKAXE_COPPER.get(), Ingredient.of(Items.IRON_INGOT), RecipeCategory.TOOLS, Items.IRON_PICKAXE, false);
@@ -112,7 +117,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, AUSItems.OBSIDIANIZED_PICKAXE_WOOD.get(), Ingredient.of(Tags.Items.STONES), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_PICKAXE_STONE.get(), true);
 	}
 
-	private static void shovels(RecipeOutput recipeOutput) {
+	private static void shovels(RecipeOutput recipeOutput) 
+	{
 		shovel(recipeOutput, Tags.Items.INGOTS_COPPER, AUSItems.SHOVEL_COPPER);
 		materialUpgrade(recipeOutput, AUSItems.SHOVEL_COPPER.get(), Ingredient.of(Items.OBSIDIAN), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_SHOVEL_COPPER.get(), null);
 		materialUpgrade(recipeOutput, AUSItems.SHOVEL_COPPER.get(), Ingredient.of(Items.IRON_INGOT), RecipeCategory.TOOLS, Items.IRON_SHOVEL, false);
@@ -145,7 +151,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, AUSItems.OBSIDIANIZED_SHOVEL_WOOD.get(), Ingredient.of(Tags.Items.STONES), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_SHOVEL_STONE.get(), true);
 	}
 
-	private static void hoes(RecipeOutput recipeOutput) {
+	private static void hoes(RecipeOutput recipeOutput) 
+	{
 		hoe(recipeOutput, Tags.Items.INGOTS_COPPER, AUSItems.HOE_COPPER);
 		materialUpgrade(recipeOutput, AUSItems.HOE_COPPER.get(), Ingredient.of(Items.OBSIDIAN), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_HOE_COPPER.get(), null);
 		materialUpgrade(recipeOutput, AUSItems.HOE_COPPER.get(), Ingredient.of(Items.IRON_INGOT), RecipeCategory.TOOLS, Items.IRON_HOE, false);
@@ -178,7 +185,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, AUSItems.OBSIDIANIZED_HOE_WOOD.get(), Ingredient.of(Tags.Items.STONES), RecipeCategory.TOOLS, AUSItems.OBSIDIANIZED_HOE_STONE.get(), true);
 	}
 
-	private static void swords(RecipeOutput recipeOutput) {
+	private static void swords(RecipeOutput recipeOutput) 
+	{
 		sword(recipeOutput, Tags.Items.INGOTS_COPPER, AUSItems.SWORD_COPPER);
 		materialUpgrade(recipeOutput, AUSItems.SWORD_COPPER.get(), Ingredient.of(Items.QUARTZ), RecipeCategory.COMBAT, AUSItems.QUARTZIFIED_SWORD_COPPER.get(), false);
 		materialUpgrade(recipeOutput, AUSItems.SWORD_COPPER.get(), Ingredient.of(Items.QUARTZ_BLOCK), RecipeCategory.COMBAT, AUSItems.QUARTZIFIED_SWORD_COPPER.get(), true);
@@ -218,7 +226,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, AUSItems.QUARTZIFIED_SWORD_WOOD.get(), Ingredient.of(Tags.Items.STONES), RecipeCategory.COMBAT, AUSItems.QUARTZIFIED_SWORD_STONE.get(), true, "2");
 	}
 
-	private static void bootsUpgrades(RecipeOutput recipeOutput) {
+	private static void bootsUpgrades(RecipeOutput recipeOutput)
+	{
 		boots(recipeOutput, Tags.Items.INGOTS_COPPER, AUSArmors.COPPER_BOOTS.get());
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_BOOTS, Ingredient.of(Items.COPPER_INGOT), RecipeCategory.COMBAT, AUSArmors.COPPER_BOOTS.get(), false);
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_BOOTS, Ingredient.of(Items.COPPER_BLOCK), RecipeCategory.COMBAT, AUSArmors.COPPER_BOOTS.get(), true);
@@ -232,7 +241,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, Items.LEATHER_BOOTS, Ingredient.of(Items.CHAIN), RecipeCategory.COMBAT, Items.CHAINMAIL_BOOTS, true);
 	}
 
-	private static void chestplateUpgrades(RecipeOutput recipeOutput) {
+	private static void chestplateUpgrades(RecipeOutput recipeOutput) 
+	{
 		chestplate(recipeOutput, Tags.Items.INGOTS_COPPER, AUSArmors.COPPER_CHESTPLATE.get());
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_CHESTPLATE, Ingredient.of(Items.COPPER_INGOT), RecipeCategory.COMBAT, AUSArmors.COPPER_CHESTPLATE.get(), false);
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_CHESTPLATE, Ingredient.of(Items.COPPER_BLOCK), RecipeCategory.COMBAT, AUSArmors.COPPER_CHESTPLATE.get(), true);
@@ -246,7 +256,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, Items.LEATHER_CHESTPLATE, Ingredient.of(Items.CHAIN), RecipeCategory.COMBAT, Items.CHAINMAIL_CHESTPLATE, true);
 	}
 
-	private static void helmetUpgrades(RecipeOutput recipeOutput) {
+	private static void helmetUpgrades(RecipeOutput recipeOutput) 
+	{
 		helmet(recipeOutput, Tags.Items.INGOTS_COPPER, AUSArmors.COPPER_HELMET.get());
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_HELMET, Ingredient.of(Items.COPPER_INGOT), RecipeCategory.COMBAT, AUSArmors.COPPER_HELMET.get(), false);
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_HELMET, Ingredient.of(Items.COPPER_BLOCK), RecipeCategory.COMBAT, AUSArmors.COPPER_HELMET.get(), true);
@@ -260,7 +271,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, Items.LEATHER_HELMET, Ingredient.of(Items.CHAIN), RecipeCategory.COMBAT, Items.CHAINMAIL_HELMET, true);
 	}
 
-	private static void leggingsUpgrades(RecipeOutput recipeOutput) {
+	private static void leggingsUpgrades(RecipeOutput recipeOutput) 
+	{
 		leggings(recipeOutput, Tags.Items.INGOTS_COPPER, AUSArmors.COPPER_LEGGINGS.get());
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_LEGGINGS, Ingredient.of(Items.COPPER_INGOT), RecipeCategory.COMBAT, AUSArmors.COPPER_LEGGINGS.get(), false);
 		materialUpgrade(recipeOutput, Items.CHAINMAIL_LEGGINGS, Ingredient.of(Items.COPPER_BLOCK), RecipeCategory.COMBAT, AUSArmors.COPPER_LEGGINGS.get(), true);
@@ -274,7 +286,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgrade(recipeOutput, Items.LEATHER_LEGGINGS, Ingredient.of(Items.CHAIN), RecipeCategory.COMBAT, Items.CHAINMAIL_LEGGINGS, true);
 	}
 
-	private static void horseArmors(RecipeOutput recipeOutput) {
+	private static void horseArmors(RecipeOutput recipeOutput) 
+	{
 		materialUpgrade(recipeOutput, Items.LEATHER_HORSE_ARMOR, Ingredient.of(Items.COPPER_INGOT), RecipeCategory.COMBAT, AUSArmors.COPPER_HORSE_ARMOR.get(), false);
 		materialUpgrade(recipeOutput, Items.LEATHER_HORSE_ARMOR, Ingredient.of(Items.COPPER_BLOCK), RecipeCategory.COMBAT, AUSArmors.COPPER_HORSE_ARMOR.get(), true);
 		materialUpgrade(recipeOutput, AUSArmors.COPPER_HORSE_ARMOR.get(), Ingredient.of(Items.IRON_INGOT), RecipeCategory.COMBAT, Items.IRON_HORSE_ARMOR, false);
@@ -287,7 +300,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 		materialUpgradeVanillaStyle(recipeOutput, Items.DIAMOND_HORSE_ARMOR, Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, AUSArmors.NETHERITE_HORSE_ARMOR.get(), true);
 	}
 
-	protected static void boots(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void boots(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
 				.define('X', material)
 				.pattern("X X")
@@ -296,7 +310,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void chestplate(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void chestplate(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
 				.define('X', material)
 				.pattern("X X")
@@ -306,7 +321,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void helmet(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void helmet(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
 				.define('X', material)
 				.pattern("XXX")
@@ -315,7 +331,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void leggings(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void leggings(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result)
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
 				.define('X', material)
 				.pattern("XXX")
@@ -325,7 +342,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void axe(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void axe(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
 				.define('#', Tags.Items.RODS_WOODEN)
 				.define('X', material)
@@ -336,7 +354,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void pickaxe(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void pickaxe(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
 				.define('#', Tags.Items.RODS_WOODEN)
 				.define('X', material)
@@ -347,7 +366,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void shovel(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void shovel(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
 				.define('#', Tags.Items.RODS_WOODEN)
 				.define('X', material)
@@ -358,7 +378,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void hoe(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void hoe(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
 				.define('#', Tags.Items.RODS_WOODEN)
 				.define('X', material)
@@ -369,7 +390,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void sword(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) {
+	protected static void sword(RecipeOutput recipeOutput, TagKey<Item> material, ItemLike result) 
+	{
 		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result)
 				.define('#', Tags.Items.RODS_WOODEN)
 				.define('X', material)
@@ -380,11 +402,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				.save(recipeOutput);
 	}
 
-	protected static void materialUpgrade(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard) {
+	protected static void materialUpgrade(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard) 
+	{
 		materialUpgrade(recipeOutput, baseItem, upgradeItem, category, resultItem, isHard, null);
 	}
 
-	protected static void materialUpgrade(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard, String suffix) {
+	protected static void materialUpgrade(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard, String suffix)
+	{
 		AUSUpgradeRecipeBuilder builder = AUSUpgradeRecipeBuilder.smithing(
 						Ingredient.of(AUSItems.SMITHING_TEMPLATE), Ingredient.of(baseItem), upgradeItem, category, resultItem
 				)
@@ -393,11 +417,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 				builder.save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Reference.MODID, "upgrade/" + (isHard == null ? "" : (isHard ? "hard/" : "easy/")) + getItemName(resultItem) + (suffix != null ? suffix : "")));
 	}
 	
-	protected static void materialUpgradeVanillaStyle(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard) {
+	protected static void materialUpgradeVanillaStyle(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard) 
+	{
 		materialUpgradeVanillaStyle(recipeOutput, baseItem, upgradeItem, category, resultItem, isHard, null);
 	}
 	
-	protected static void materialUpgradeVanillaStyle(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard, String suffix) {
+	protected static void materialUpgradeVanillaStyle(RecipeOutput recipeOutput, Item baseItem, Ingredient upgradeItem, RecipeCategory category, Item resultItem, Boolean isHard, String suffix) 
+	{
 		AUSUpgradeRecipeBuilder builder = AUSUpgradeRecipeBuilder.smithing(
 						Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(baseItem), upgradeItem, category, resultItem
 				)

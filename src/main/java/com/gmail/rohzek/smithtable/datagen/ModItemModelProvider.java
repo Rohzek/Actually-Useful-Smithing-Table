@@ -11,19 +11,25 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
-public class ModItemModelProvider extends ItemModelProvider {
-	public ModItemModelProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+public class ModItemModelProvider extends ItemModelProvider 
+{
+	public ModItemModelProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) 
+	{
 		super(packOutput, Reference.MODID, existingFileHelper);
 	}
 
 	@Override
-	protected void registerModels() {
-		for (DeferredHolder<Item, ? extends Item> entry : DeferredRegistration.ITEMS.getEntries()) {
+	protected void registerModels() 
+	{
+		for (DeferredHolder<Item, ? extends Item> entry : DeferredRegistration.ITEMS.getEntries()) 
+		{
 			simpleItem(entry.get());
 		}
 	}
 
-	protected ItemModelBuilder simpleItem(Item item) {
-		return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
+	// item/generated looked weird in 3rd person, use item/handheld
+	protected ItemModelBuilder simpleItem(Item item) 
+	{
+		return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
 	}
 }
