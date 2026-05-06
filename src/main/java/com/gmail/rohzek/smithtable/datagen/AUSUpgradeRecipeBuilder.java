@@ -1,5 +1,12 @@
 package com.gmail.rohzek.smithtable.datagen;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.jetbrains.annotations.Nullable;
+
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRequirements;
 import net.minecraft.advancements.AdvancementRewards;
@@ -13,12 +20,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import net.neoforged.neoforge.common.conditions.ICondition;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
 public class AUSUpgradeRecipeBuilder {
 	/*
@@ -80,7 +81,8 @@ public class AUSUpgradeRecipeBuilder {
 	private final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 	protected final List<ICondition> conditions = new ArrayList<>();
 
-	public AUSUpgradeRecipeBuilder(Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result) {
+	public AUSUpgradeRecipeBuilder(Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result) 
+	{
 		this.category = category;
 		this.template = template;
 		this.base = base;
@@ -88,29 +90,34 @@ public class AUSUpgradeRecipeBuilder {
 		this.result = result;
 	}
 
-	public static AUSUpgradeRecipeBuilder smithing(
-			Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result
-	) {
+	public static AUSUpgradeRecipeBuilder smithing(Ingredient template, Ingredient base, Ingredient addition, RecipeCategory category, Item result) 
+	{
 		return new AUSUpgradeRecipeBuilder(template, base, addition, category, result);
 	}
 
-	public AUSUpgradeRecipeBuilder unlocks(String key, Criterion<?> criterion) {
+	public AUSUpgradeRecipeBuilder unlocks(String key, Criterion<?> criterion)
+	{
 		this.criteria.put(key, criterion);
 		return this;
 	}
 
-	public AUSUpgradeRecipeBuilder addCondition(@Nullable ICondition condition) {
-		if (condition != null) {
+	public AUSUpgradeRecipeBuilder addCondition(@Nullable ICondition condition) 
+	{
+		if (condition != null) 
+		{
 			this.conditions.add(condition);
 		}
+		
 		return this;
 	}
 
-	public void save(RecipeOutput recipeOutput, String recipeId) {
+	public void save(RecipeOutput recipeOutput, String recipeId) 
+	{
 		this.save(recipeOutput, ResourceLocation.parse(recipeId));
 	}
 
-	public void save(RecipeOutput recipeOutput, ResourceLocation recipeId) {
+	public void save(RecipeOutput recipeOutput, ResourceLocation recipeId) 
+	{
 		this.ensureValid(recipeId);
 		ICondition[] finalConditions = new ICondition[this.conditions.size()];
 		finalConditions = this.conditions.toArray(finalConditions);
@@ -124,8 +131,10 @@ public class AUSUpgradeRecipeBuilder {
 		conditionalRecipeOutput.accept(recipeId, smithingtransformrecipe, advancement$builder.build(recipeId.withPrefix("recipes/" + this.category.getFolderName() + "/")));
 	}
 
-	private void ensureValid(ResourceLocation location) {
-		if (this.criteria.isEmpty()) {
+	private void ensureValid(ResourceLocation location) 
+	{
+		if (this.criteria.isEmpty()) 
+		{
 			throw new IllegalStateException("No way of obtaining recipe " + location);
 		}
 	}
